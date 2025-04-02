@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quoc Nguyen - Technical Lead</title>
+    <meta name="description" content="Seasoned Technical Lead with 15+ years driving impactful software solutions using .NET, Microservices, and Cloud technologies.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/microsoft/vscode/main/resources/win32/code.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">QN</a>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
+                <a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a>
+                <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+                <a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Hide/Show navigation on scroll
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const nav = document.querySelector('.nav');
+            
+            if (currentScroll <= 0) {
+                nav.style.transform = 'translateY(0)';
+                return;
+            }
+            
+            if (currentScroll > lastScroll && currentScroll > 50) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="avatar.jpeg" alt="Quoc Nguyen" class="profile-pic">
+                <h1 class="glowing-text">Quoc Nguyen</h1>
+                <h2>Technical Lead</h2>
+                <p class="tagline">Seasoned Technical Lead with 15+ years driving impactful software solutions using .NET, Microservices, and Agile methodologies.</p>
+                <div class="social-links">
+                    <a href="mailto:nmquoc89@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+84792001073" aria-label="Phone"><i class="fas fa-phone"></i></a> 
+                    <a href="https://www.linkedin.com/in/quoc-nguyen-minh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/quocnguyen" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="#about" class="scroll-down">
+                    <i class="fas fa-chevron-down"></i>
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2><i class="fas fa-user-circle icon"></i> About Me</h2>
+            <p>With over 15 years in software development, I am a passionate Technical Lead focused on delivering innovative and impactful solutions. I possess deep experience in leading cross-functional teams, architecting complex systems (Microservices, Event-Driven), and mastering the .NET ecosystem (C#, WPF, ASP.NET Core, MAUI). Holding a PMP certification and embracing Agile principles, I am committed to delivering high-quality products on time and exceeding expectations. I continuously seek new challenges and opportunities to leverage cutting-edge technologies for driving success.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2><i class="fas fa-cogs icon"></i> Skills</h2>
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Languages & Platforms:</h3>
+                <span class="skill-tag"><i class="fab fa-microsoft"></i> C#</span>
+                <span class="skill-tag"><i class="fas fa-cube"></i> .NET Framework</span>
+                <span class="skill-tag"><i class="fas fa-cubes"></i> .NET Core</span>
+                <span class="skill-tag"><i class="fas fa-mobile-alt"></i> MAUI</span>
+                <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-globe"></i> Web & Services:</h3>
+                <span class="skill-tag"><i class="fas fa-server"></i> ASP.NET MVC</span>
+                <span class="skill-tag"><i class="fas fa-server"></i> ASP.NET Core</span>
+                <span class="skill-tag"><i class="fas fa-plug"></i> WebAPI</span>
+                <span class="skill-tag"><i class="fas fa-bolt"></i> Blazor</span>
+                <span class="skill-tag"><i class="fas fa-network-wired"></i> gRPC</span>
+                <span class="skill-tag"><i class="fas fa-exchange-alt"></i> RESTful Services</span>
+                <span class="skill-tag"><i class="fas fa-cogs"></i> WCF</span>
+                <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-desktop"></i> Desktop:</h3>
+                <span class="skill-tag"><i class="fas fa-window-maximize"></i> WPF (MVVM, MEF)</span>
+                <span class="skill-tag"><i class="fas fa-window-restore"></i> WinForms</span>
+                <span class="skill-tag"><i class="fas fa-mobile"></i> Xamarin</span>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Databases:</h3>
+                <span class="skill-tag"><i class="fas fa-server"></i> MS SQL Server</span>
+                <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                <span class="skill-tag"><i class="fas fa-file-alt"></i> SQLite</span>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-sitemap"></i> Architectures & Patterns:</h3>
+                <span class="skill-tag"><i class="fas fa-microchip"></i> Microservices</span>
+                <span class="skill-tag"><i class="fas fa-project-diagram"></i> SOA</span>
+                <span class="skill-tag"><i class="fas fa-random"></i> Event-Driven Design</span>
+                <span class="skill-tag"><i class="fas fa-cube"></i> OOP</span>
+                <span class="skill-tag"><i class="fas fa-puzzle-piece"></i> Design Patterns</span>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-cloud"></i> Cloud & DevOps:</h3>
+                <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure DevOps (CI/CD)</span>
+                <span class="skill-tag"><i class="fab fa-aws"></i> AWS Basics (SQS, S3)</span>
+                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-tasks"></i> Methodologies & Tools:</h3>
+                <span class="skill-tag"><i class="fas fa-sync"></i> Agile</span>
+                <span class="skill-tag"><i class="fas fa-users"></i> Scrum</span>
+                <span class="skill-tag"><i class="fas fa-columns"></i> Kanban</span>
+                <span class="skill-tag"><i class="fas fa-certificate"></i> PMP</span>
+                <span class="skill-tag"><i class="fas fa-vial"></i> TDD</span>
+                <span class="skill-tag"><i class="fas fa-check-circle"></i> Selenium</span>
+                <span class="skill-tag"><i class="fas fa-check-double"></i> Unit Testing</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Projects Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2><i class="fas fa-briefcase icon"></i> Experience & Projects</h2>
+            
+            <!-- RMH -->
+            <div class="company-section">
+                <div class="company-header">
+                    <h3>Retail Management Hero (RMH)</h3>
+                    <p class="job-duration">May 2015 – Present | Technical Lead | Ho Chi Minh City, Vietnam (Remote)</p>
+                </div>
+                
+                <div class="key-projects">
+                    <div class="project">
+                        <h4>RMH Point of Sale Ecosystem</h4>
+                        <p class="project-role">Lead Architect & Developer</p>
+                        <ul>
+                            <li>Architected and led development of enterprise POS system serving 60+ stores</li>
+                            <li>Implemented microservices architecture using gRPC and Hub Service patterns</li>
+                            <li>Designed robust data synchronization framework for multi-store deployment</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="skill-tag">C# .NET</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">gRPC</span>
+                            <span class="skill-tag">SQL Server</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h4>RMH Mobile Solutions</h4>
+                        <p class="project-role">Technical Lead</p>
+                        <ul>
+                            <li>Led development of cross-platform mobile applications for inventory and sales</li>
+                            <li>Implemented hybrid solutions using MAUI and Xamarin</li>
+                            <li>Integrated with core POS system via RESTful APIs</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="skill-tag">MAUI</span>
+                            <span class="skill-tag">Xamarin</span>
+                            <span class="skill-tag">WebAPI</span>
+                            <span class="skill-tag">Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DNAfor.NET -->
+            <div class="company-section">
+                <div class="company-header">
+                    <h3>DNAfor.NET</h3>
+                    <p class="job-duration">May 2011 – Jul 2015 | Senior Software Developer | Ho Chi Minh City, Vietnam</p>
+                </div>
+                
+                <div class="key-projects">
+                    <div class="project">
+                        <h4>ChartLogic Healthcare EMR</h4>
+                        <p class="project-role">Senior Developer</p>
+                        <ul>
+                            <li>Developed comprehensive EMR system with complex healthcare integrations</li>
+                            <li>Implemented MVVM architecture with WPF for robust desktop application</li>
+                            <li>Built service layer using WCF for seamless third-party integrations</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="skill-tag">WPF</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">WCF</span>
+                            <span class="skill-tag">SQL Server</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h4>GoComics Mobile Application</h4>
+                        <p class="project-role">Lead Mobile Developer</p>
+                        <ul>
+                            <li>Built cross-platform mobile app for comic content delivery</li>
+                            <li>Implemented hybrid solution using Ionic and Cordova</li>
+                            <li>Integrated content management system with MongoDB</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="skill-tag">Ionic</span>
+                            <span class="skill-tag">Cordova</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Freelance/Upwork -->
+            <div class="company-section">
+                <div class="company-header">
+                    <h3>Independent Consulting</h3>
+                    <p class="job-duration">Jan 2011 – Present | Expert Software Developer | Remote</p>
+                </div>
+                
+                <div class="key-projects">
+                    <div class="project">
+                        <h4>DN Game Studio Projects</h4>
+                        <p class="project-role">Technical Lead & Project Manager</p>
+                        <ul>
+                            <li>Led development team for multiple Unity-based game projects</li>
+                            <li>Implemented cloud infrastructure using Azure and AWS</li>
+                            <li>Managed full project lifecycle and client relationships</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="skill-tag">Unity</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">.NET</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h4>Enterprise Solutions Portfolio</h4>
+                        <p class="project-role">Solution Architect</p>
+                        <ul>
+                            <li>Developed Retail Hero Hybrid - comprehensive retail management solution</li>
+                            <li>Created Tulip AppXDev - application development platform</li>
+                            <li>Built IP Quick Switcher utility tool</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">WPF</span>
+                            <span class="skill-tag">SOA</span>
+                            <span class="skill-tag">Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2><i class="fas fa-project-diagram icon"></i> Featured Projects</h2>
+
+            <div class="project">
+                <h3>RMH Ecosystem (Point of Sale)</h3>
+                <p>Comprehensive, large-scale POS system including Store Manager, Loyalty, Account Receivable modules, and custom SDK.</p>
+                <p><strong>Role:</strong> Technical Lead</p>
+                <p><strong>Key Contributions:</strong> Architected core microservices and event-driven components, led development teams, designed sync framework, ensured scalability and performance.</p>
+                <div class="tech-stack">
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> C#</span>
+                    <span class="skill-tag"><i class="fas fa-window-maximize"></i> WPF</span>
+                    <span class="skill-tag"><i class="fas fa-network-wired"></i> gRPC</span>
+                    <span class="skill-tag"><i class="fas fa-microchip"></i> Microservices</span>
+                    <span class="skill-tag"><i class="fas fa-random"></i> Event-Driven</span>
+                    <span class="skill-tag"><i class="fas fa-server"></i> SQL Server</span>
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure DevOps</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>ChartLogic Healthcare EMR</h3>
+                <p>Complete EHR/EMR solution with advanced features like voice commands/dictation.</p>
+                 <p><strong>Role:</strong> Senior Developer</p>
+                 <p><strong>Key Contributions:</strong> Developed key features using WPF/MVVM, implemented WCF services, integrated third-party tools (Dragon Naturally Speaking, Telerik).</p>
+                <div class="tech-stack">
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> C#</span>
+                    <span class="skill-tag"><i class="fas fa-window-maximize"></i> WPF</span>
+                    <span class="skill-tag"><i class="fas fa-cube"></i> MVVM</span>
+                    <span class="skill-tag"><i class="fas fa-cogs"></i> WCF</span>
+                    <span class="skill-tag"><i class="fas fa-database"></i> Entity Framework</span>
+                    <span class="skill-tag"><i class="fas fa-server"></i> SQL Server</span>
+                </div>
+            </div>
+            
+             <div class="project">
+                <h3>DN Game Studio Projects (PPH Poker, Fish Hunter)</h3>
+                <p>Multiplayer real-time games with blockchain/web3 integration and arcade gameplay.</p>
+                 <p><strong>Role:</strong> Lead Developer / Project Manager (Outsourced Project)</p>
+                <p><strong>Key Contributions:</strong> Led team, designed game loop architecture, implemented core game logic and backend microservices, integrated blockchain elements.</p>
+                <div class="tech-stack">
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> .NET</span>
+                    <span class="skill-tag"><i class="fas fa-gamepad"></i> Unity</span>
+                    <span class="skill-tag"><i class="fas fa-microchip"></i> Arduino</span>
+                    <span class="skill-tag"><i class="fas fa-microchip"></i> Microservices</span>
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure</span>
+                    <span class="skill-tag"><i class="fas fa-cube"></i> Web3</span>
+                </div>
+            </div>
+
+             <div class="project">
+                <h3>LSB Organization (Amazon Seller Tools)</h3>
+                <p>Suite of tools for Amazon sellers automation and commercial website.</p>
+                <p><strong>Role:</strong> Lead Developer / Project Manager (Outsourced Project)</p>
+                 <p><strong>Key Contributions:</strong> Managed project team, designed architecture, developed backend services and frontend components.</p>
+                <div class="tech-stack">
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> .NET</span>
+                    <span class="skill-tag"><i class="fas fa-bolt"></i> Blazor</span>
+                    <span class="skill-tag"><i class="fas fa-cogs"></i> Windows Service</span>
+                    <span class="skill-tag"><i class="fas fa-microchip"></i> Microservices</span>
+                    <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
+                    <span class="skill-tag"><i class="fab fa-amazon"></i> Amazon API</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2><i class="fas fa-graduation-cap icon"></i> Education & Certifications</h2>
+            <div class="education-item">
+                <h3>BSc in IT Software Engineer</h3>
+                <p>Hoa Sen University, Ho Chi Minh City (GPA: 3.2)</p>
+                <p class="duration">Jan 2007 – Dec 2011</p>
+            </div>
+            <div class="certification-item">
+                <h3>Certifications</h3>
+                 <ul>
+                    <li>PMI Project Management Professional (PMP) - Aug 2022</li>
+                    <li>Software Architecture & System Design (Udemy) - Jun 2022</li>
+                    <li>Agile Fundamentals: Including Scrum & Kanban (Udemy) - Jan 2023</li>
+                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2><i class="fas fa-envelope-open-text icon"></i> Contact</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p class="contact-intro">Let's connect! I'm open to discussing new opportunities and collaborations.</p>
+                    <div class="contact-links">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-detail">
+                                <h3>Email</h3>
+                                <a href="mailto:nmquoc89@gmail.com">nmquoc89@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-detail">
+                                <h3>Phone</h3>
+                                <a href="tel:+84792001073">(+84) 79 200 10 73</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="contact-detail">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/quoc-nguyen-minh/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div class="contact-detail">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/quocnguyen" target="_blank" rel="noopener noreferrer">View Projects</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-detail">
+                                <h3>Location</h3>
+                                <p>Dist. 7, Ho Chi Minh City, Vietnam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>QN</h3>
+                    <p>Full Stack Software Engineer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:nmquoc89@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+84792001073" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/quoc-nguyen-minh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/quocnguyen" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Quoc Nguyen. All rights reserved.</p>
+                    <p class="footer-quote">"Building the future, one line of code at a time."</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.section, .company-section, .project');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+    </script>
+</body>
+</html>
